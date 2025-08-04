@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
   <header>
-    <h1>Health Aid Maldives</h1>
+    <h1>Health Aid Maldives.</h1>
     <nav>
       <a href="index.php" class="btn">Home</a>
       <a href="cases.php" class="btn">Health Cases</a>
