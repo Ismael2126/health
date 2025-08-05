@@ -46,7 +46,7 @@
 
 <!-- Footer Section -->
 <footer>
-  ⚠️ Disclaimer: We do not collect or transfer money. Donations go directly to the bank accounts provided by the patients.testa
+  ⚠️ Disclaimer: We do not collect or transfer money. Donations go directly to the bank accounts provided by the patients.testaa
 </footer>
 
 </body>
