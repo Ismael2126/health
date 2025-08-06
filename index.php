@@ -27,19 +27,35 @@
 <!-- Main Section -->
 <main>
   <div class="container">
-    <h2>Welcome to Health Aid Maldives</h2>
+    <h2>💙 A Platform Built with Heart — For Maldivians, By Maldivians</h2>
     <p>
-      This platform was built to help Maldivians who need urgent medical support.
-      We do not collect donations or manage any funds. Every donation goes directly into the patient’s bank account.
+      Every day, someone in the Maldives faces the overwhelming burden of urgent medical costs — a child who needs surgery, a mother waiting on a life-saving treatment, a father fighting illness silently because he doesn’t know where to turn.
     </p>
 
     <p>
-      If you or your loved one is in need of help, click on “Submit a Request” above. 
-      All cases are verified and listed transparently for donors to help directly.
+      We do not collect or handle any money. There are no middlemen, no fees, and no deductions. Every contribution goes straight to the patient’s bank account, exactly where it’s needed, with no interference.
     </p>
 
     <p>
-      💙 100% Transparent. 100% Free. Built with compassion.
+      If you or someone you love is struggling with medical bills or facing an urgent health situation, you can submit a request by clicking “Submit a Request” above. Every case is reviewed, verified, and presented clearly — with honesty and dignity — so that anyone who wants to help can do so with full trust.
+    </p>
+
+    <p>
+      We believe that kindness shouldn’t be complicated. That help should feel human. And that every Maldivian, no matter where they are from or what they’re going through, deserves a chance at healing.
+    </p>
+
+    <p>
+      This is more than just a website. It’s a movement of care.
+    </p>
+
+    <p>
+     💙 100% Transparent. 100% Free.
+Built with compassion. Powered by people.
+    </p>
+
+
+
+    
     </p>
   </div>
 </main>

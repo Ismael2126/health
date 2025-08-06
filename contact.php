@@ -35,13 +35,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+<?php 
+  $siteTitle = "Helping Maldivians Heal – 100% Free. 100% Transparent.";
+  $description = "We do not collect or handle donations — all funds go directly to the patients' bank accounts.";
+?>
   <header>
-    <h1>Health Aid Maldives.</h1>
-    <nav>
+
+     <h1><?php echo $siteTitle; ?></h1>
+      <p><?php echo $description; ?></p>
+      <div class="btn-group">
       <a href="index.php" class="btn">Home</a>
-      <a href="cases.php" class="btn">Health Cases</a>
-      <a href="contact.php" class="btn active">Contact Us</a>
-    </nav>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfdkNRuy1r5GOTJ1_CrSbf_MIbJOR5thE5nuBAItUHihxggbg/viewform?usp=dialog" target="_blank" class="btn">Submit a Request</a>
+      <a href="cases.php" class="btn">View Health Cases</a>
+      <a href="contact.php" class="btn">Contact Us</a>
+  </div>
   </header>
 
   <main>
