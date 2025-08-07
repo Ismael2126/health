@@ -85,7 +85,7 @@
     <input type="number" id="amount-usd" name="amount-usd" min="0" step="0.01" />
   </div>
 
-  <button type="submit" class="submit-btn">Submit</button>
+  <button type="submit" class="submit-btn">Submit.</button>
 </form>
 
     </div>
