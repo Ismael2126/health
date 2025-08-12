@@ -18,7 +18,8 @@
   <h1><?php echo $siteTitle; ?></h1>
   <p><?php echo $description; ?></p>
   <div class="btn-group">
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfdkNRuy1r5GOTJ1_CrSbf_MIbJOR5thE5nuBAItUHihxggbg/viewform?usp=dialog" target="_blank" class="btn">Submit a Request</a>
+    
+    <a href="form_db\Form.php" class="btn">Submit a Request</a>
     <a href="cases.php" class="btn">View Health Cases</a>
     <a href="contact.php" class="btn">Contact Us</a>
   </div>
