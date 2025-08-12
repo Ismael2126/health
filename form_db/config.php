@@ -1,8 +1,12 @@
-
 <?php
-$host = "sql12.freesqldatabase.com";
-$user = "sql12794497";
-$pass = "XkySYVqzmN";
-$db   = "sql12794497";
+$host = "sql100.infinityfree.com"; // Your MySQL Host Name
+$user = "if0_39687447";            // Your MySQL Username
+$pass = "9TKPHkHPjqXQ";            // Your MySQL Password
+$db   = "if0_39687447_health";     // Your MySQL Database Name
+
 $conn = new mysqli($host, $user, $pass, $db);
-if ($conn->connect_error) { die("DB fail: " . $conn->connect_error); }
+
+if ($conn->connect_error) {
+    die("Database connection failed: " . $conn->connect_error);
+}
+?>
