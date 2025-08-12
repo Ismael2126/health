@@ -19,7 +19,7 @@
   <div class="btn-group">
     <a href="../index.php"  class="btn">Home</a>
     <a href="../cases.php" class="btn">View Health Cases</a>
-    <a href="contact.php" class="btn">Contact Us</a>
+    <a href="../contact.php" class="btn">Contact Us</a>
   </div>
 </header>
 

@@ -115,8 +115,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <section class="our-story" style="margin-top:1.5rem;">
       <h2>Our Story</h2>
       <p>
-        This platform was inspired and created by <strong>Ismail Ahmed</strong> and <strong>Afsal Ahmed Aboobakur</strong>
-        with the vision to help the community by providing a single platform to find and support those who need medical help.
+        This platform was created by two friends with a shared vision — to unite the community in helping those facing medical challenges.
+It serves as a single, trusted space where anyone can find and support people in urgent need of healthcare assistance.
+
+Our mission is simple yet powerful: to make medical aid transparent, accessible, and free from unnecessary obstacles.
+We believe that when compassion meets clarity, hope grows — and every Maldivian in need deserves that hope.
       </p>
       <p>
         Our motivation is to make healthcare support transparent, easy, and accessible for every Maldivian in need.
