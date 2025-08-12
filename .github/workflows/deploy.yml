@@ -1,28 +1,29 @@
-name: Deploy to InfinityFree via FTP
+
+# .github/workflows/test-ftp.yml
+name: Test FTP to InfinityFree
 on:
-  push:
-    branches: [ main ]
+  workflow_dispatch: {}   # run manually from the Actions tab
 
 jobs:
-  ftp-deploy:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Upload via FTP
+      - name: Create test file
+        run: echo "ok $(date -u)" > ping.txt
+
+      - name: FTP upload (verbose)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ftpupload.net
           username: if0_39687447
           password: 9TKPHkHPjqXQ
-          server-dir: /htdocs/
+          server-dir: /htdocs/_gh_test/
           local-dir: .
           protocol: ftp
+          log-level: verbose
           exclude: |
             **/.git*
             **/.github/**
             **/node_modules/**
-            form_db/uploads/**
-            form_db/config.php
-            *.md
-            *.env
