@@ -1,0 +1,27 @@
+name: Test FTP connection to InfinityFree
+on:
+  workflow_dispatch: {}   # run manually from the Actions tab
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # create a small test file at runtime
+      - name: Create ping file
+        run: echo "ok $(date -u)" > ping.txt
+
+      - name: Upload via FTP (test folder)
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ftpupload.net
+          username: if0_39687447
+          password: 9TKPHkHPjqXQ   # make sure this secret exists
+          server-dir: /htdocs/_gh_test/           # change if your site lives elsewhere
+          local-dir: .
+          protocol: ftp
+          exclude: |
+            **/.git*
+            **/.github/**
+            **/node_modules/**
