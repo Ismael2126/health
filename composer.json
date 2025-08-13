@@ -1,0 +1,6 @@
+{
+  "name": "healthaid/site",
+  "description": "Health Aid Maldives crowdfunding site",
+  "type": "project",
+  "require": { "php": "^8.2" }
+}
