@@ -461,3 +461,17 @@ body {
   color: red;
   margin-left: 2px;
 }
+/* Ensure age input + dropdown match form styling */
+.form-group input[type="number"],
+.form-group select {
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+}
+
+.form-group div {
+  display: flex;
+  gap: 10px;
+}
