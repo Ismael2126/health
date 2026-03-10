@@ -1,0 +1,1 @@
+console.log("Health Aid Maldives homepage loaded");

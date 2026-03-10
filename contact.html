@@ -2,51 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact Us - Health Aid Maldives</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Health Aid Maldives</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Health Aid Maldives</h1>
-    <nav>
-      <a href="index.html" class="btn">Home</a>
-      <a href="cases.html" class="btn">Health Cases</a>
-      <a href="contact.html" class="btn active">Contact Us</a>
-    </nav>
-  </header>
+  <nav class="navbar">
+    <div class="logo">Health Aid Maldives</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cases.html">Cases</a></li>
+      <li><a href="submit-case.html">Request Aid</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="admin/login.html">Admin</a></li>
+    </ul>
+  </nav>
 
-  <main>
-    <h2>Contact Us</h2>
-    <p>If you have any questions or need assistance, please fill out the form below or email us directly at <a href="mailto:info@healthaidmv.com">info@healthaidmv.com</a>.</p>
-
-    <form action="mailto:info@healthaidmv.com" method="post" enctype="text/plain" class="contact-form">
-      <label for="name">Full  Name:</label>
-      <input type="text" id="name" name="name" required />
-
-      <label for="email">Email Address:</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-
-    <section class="our-story">
-      <h2>Our Story</h2>
-      <p>
-        This platform was inspired and created by <strong>Ismail Ahmed</strong> and <strong>Afsal Ahmed Aboobakur</strong> with the vision to help the community by providing a single platform to find and support those who need medical help.
+  <section class="form-section">
+    <div class="form-container">
+      <h1>Contact Us</h1>
+      <p class="form-subtext">
+        Reach out to us for support, case inquiries, or general information.
       </p>
-      <p>
-        Their motivation is to make healthcare support transparent, easy, and accessible for every Maldivian in need.
-      </p>
-    </section>
-  </main>
 
-  <footer>
-    ⚠️ Disclaimer: We do not collect or transfer money. Donations go directly to the bank accounts provided by the patients.
-  </footer>
-  <script src="js/script.js"></script>
+      <div class="contact-grid">
+        <div class="contact-info-box">
+          <h2>Get in Touch</h2>
+          <p><strong>Email:</strong> info@healthaidmv.com</p>
+          <p><strong>Phone:</strong> +960 9907574</p>
+          <p><strong>Location:</strong> Maldives</p>
+          <p><strong>Working Hours:</strong> Sunday to Thursday, 9:00 AM – 5:00 PM</p>
+
+          <a
+            href="https://wa.me/9609907574"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn contact-btn"
+          >
+            Chat on WhatsApp
+          </a>
+        </div>
+
+        <div class="contact-form-box">
+          <h2>Send a Message</h2>
+
+          <form id="contactForm" class="aid-form">
+            <div class="form-grid contact-form-grid">
+              <div class="form-group">
+                <label for="contactName">Full Name</label>
+                <input type="text" id="contactName" required />
+              </div>
+
+              <div class="form-group">
+                <label for="contactEmail">Email Address</label>
+                <input type="email" id="contactEmail" required />
+              </div>
+
+              <div class="form-group full-width">
+                <label for="contactSubject">Subject</label>
+                <input type="text" id="contactSubject" required />
+              </div>
+
+              <div class="form-group full-width">
+                <label for="contactMessageText">Message</label>
+                <textarea id="contactMessageText" rows="6" required></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+            <div id="contactMessage" class="form-message"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/contact.js"></script>
 </body>
 </html>

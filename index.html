@@ -3,56 +3,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HealthAid MV</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Health Aid Maldives</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="nav-left">
-    <span class="brand">HealthAid MV</span>
-  </div>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Health Aid Maldives</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cases.html">Cases</a></li>
+        <li><a href="submit-case.html">Request Aid</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="admin/login.html">Admin</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div class="nav-right">
-    <a href="index.html">Home</a>
-    <a href="cases.html">Cases</a>
-    <a href="submit.html">Form </a>
-    <a href="contact.html">Contact</a>
-    <button id="darkToggle">🌙</button>
-  </div>
-</nav>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Together We Can Save Lives</h1>
+      <p>
+        A transparent platform where people can request medical aid and donors can support directly.
+      </p>
+      <div class="hero-buttons">
+        <a href="submit-case.html" class="btn">Request Medical Aid</a>
+        <a href="cases.html" class="btn btn-secondary">View Cases</a>
+      </div>
+    </div>
+  </section>
 
-<!-- HERO -->
-<header class="hero">
-  <div class="hero-content">
-    <h1>Help Save Lives</h1>
-    <p>
-      Support patients in need of urgent medical assistance.
-      Donations go directly to verified cases.
-    </p>
+  <section class="intro">
+    <h2>How It Works</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>1. Submit Request</h3>
+        <p>Patients or families submit their medical aid request with supporting details.</p>
+      </div>
+      <div class="card">
+        <h3>2. Review Process</h3>
+        <p>Administrators review and approve genuine cases before publishing.</p>
+      </div>
+      <div class="card">
+        <h3>3. Direct Support</h3>
+        <p>Donors can view approved cases and support patients directly through their bank accounts.</p>
+      </div>
+    </div>
+  </section>
 
-    <a href="cases.html" class="hero-btn">
-      View Medical Cases
-    </a>
-  </div>
-</header>
+  <footer class="footer">
+    <p>© 2026 Health Aid Maldives. All rights reserved.</p>
+  </footer>
 
-<!-- ABOUT -->
-<section class="about">
-  <h2>About HealthAid</h2>
-  <p>
-    HealthAid MV is a community-driven platform helping patients
-    receive direct medical support. All cases are verified
-    by administrators before public listing.
-  </p>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  © 2025 HealthAid Maldives
-</footer>
-
-<script src="js/script.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

@@ -3,39 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cases - Health  Aid</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Cases - Health Aid Maldives</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <nav class="navbar">
+    <div class="logo">Health Aid Maldives</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cases.html">Cases</a></li>
+      <li><a href="submit-case.html">Request Aid</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="admin/login.html">Admin</a></li>
+    </ul>
+  </nav>
 
-<nav class="navbar">
-  <div class="nav-left">
-    <img src="images/flag-mv.png" class="flag" alt="MV">
-    <span class="brand">HealthAid MV</span>
-  </div>
+  <section class="intro">
+    <h2>Medical Aid Cases</h2>
+    <p>Support verified patients directly through the provided bank accounts.</p>
+    <div id="casesMessage" class="form-message"></div>
+    <div id="publicCases" class="cards public-cases"></div>
+  </section>
 
-   <div class="nav-right">
-    <a href="index.html">Home</a>
-    <a href="cases.html">Cases</a>
-    <a href="submit.html">Form</a>
-    <a href="contact.html">Contact</a>
-    <!-- Dark Mode Toggle -->
-    <button id="darkToggle">🌙</button>
-  </div>
-</nav>
-
-
-<section class="cases-container">
-  <h2>Active Medical Cases</h2>
-
-  <div id="approvedCases">
-    <p>Loading approved cases...</p>
-  </div>
-</section>
-
-
-<script type="module" src="js/cases.js"></script>
-<script src="js/script.js"></script>
-
+  <script type="module" src="js/cases.js"></script>
 </body>
 </html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request Aid - Health Aid Maldives</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Health Aid Maldives</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cases.html">Cases</a></li>
+      <li><a href="submit-case.html">Request Aid</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="admin/login.html">Admin</a></li>
+    </ul>
+  </nav>
+
+  <section class="form-section">
+    <div class="form-container">
+      <h1>Medical Aid Request Form</h1>
+      <p class="form-subtext">
+        Please provide accurate details. All requests will be reviewed before publishing.
+      </p>
+
+      <form id="aidForm" class="aid-form">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="patientName">Patient Full Name</label>
+            <input type="text" id="patientName" name="patientName" required />
+          </div>
+
+          <div class="form-group">
+            <label for="guardianName">Guardian / Contact Person</label>
+            <input type="text" id="guardianName" name="guardianName" required />
+          </div>
+
+          <div class="form-group">
+            <label for="age">Patient Age</label>
+            <input type="number" id="age" name="age" min="0" required />
+          </div>
+
+          <div class="form-group">
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+              <option value="">Select</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Contact Number</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" />
+          </div>
+
+          <div class="form-group">
+            <label for="island">Island / City</label>
+            <input type="text" id="island" name="island" required />
+          </div>
+
+          <div class="form-group">
+            <label for="hospital">Hospital / Treatment Place</label>
+            <input type="text" id="hospital" name="hospital" required />
+          </div>
+
+          <div class="form-group full-width">
+            <label for="caseTitle">Case Title</label>
+            <input
+              type="text"
+              id="caseTitle"
+              name="caseTitle"
+              placeholder="Example: Help Ahmed for urgent heart surgery"
+              required
+            />
+          </div>
+
+          <div class="form-group full-width">
+            <label for="diagnosis">Medical Condition / Diagnosis</label>
+            <input
+              type="text"
+              id="diagnosis"
+              name="diagnosis"
+              placeholder="Example: Liver transplant, kidney treatment, surgery, etc."
+              required
+            />
+          </div>
+
+          <div class="form-group full-width">
+            <label for="story">Case Story</label>
+            <textarea
+              id="story"
+              name="story"
+              rows="6"
+              placeholder="Explain the medical situation, financial need, and why support is needed."
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="targetAmount">Target Amount (MVR)</label>
+            <input type="number" id="targetAmount" name="targetAmount" min="1" required />
+          </div>
+
+          <div class="form-group">
+            <label for="idNumber">ID Card / Passport Number</label>
+            <input type="text" id="idNumber" name="idNumber" required />
+          </div>
+
+          <div class="form-group full-width">
+            <label>Bank Account Details</label>
+            <small>Please provide MVR account, USD account, or both.</small>
+          </div>
+
+          <div class="bank-columns full-width">
+            <div class="bank-box">
+              <h3>MVR Account Details</h3>
+
+              <div class="form-group">
+                <label for="mvrBankName">MVR Bank Name</label>
+                <input type="text" id="mvrBankName" name="mvrBankName" />
+              </div>
+
+              <div class="form-group">
+                <label for="mvrAccountName">MVR Account Name</label>
+                <input type="text" id="mvrAccountName" name="mvrAccountName" />
+              </div>
+
+              <div class="form-group">
+                <label for="mvrAccountNumber">MVR Account Number</label>
+                <input type="text" id="mvrAccountNumber" name="mvrAccountNumber" />
+              </div>
+            </div>
+
+            <div class="bank-box">
+              <h3>USD Account Details</h3>
+
+              <div class="form-group">
+                <label for="usdBankName">USD Bank Name</label>
+                <input type="text" id="usdBankName" name="usdBankName" />
+              </div>
+
+              <div class="form-group">
+                <label for="usdAccountName">USD Account Name</label>
+                <input type="text" id="usdAccountName" name="usdAccountName" />
+              </div>
+
+              <div class="form-group">
+                <label for="usdAccountNumber">USD Account Number</label>
+                <input type="text" id="usdAccountNumber" name="usdAccountNumber" />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="documents">Upload Supporting Documents</label>
+            <input
+              type="file"
+              id="documents"
+              name="documents"
+              multiple
+              accept=".jpg,.jpeg,.png,.pdf"
+            />
+            <small>Accepted: JPG, PNG, PDF</small>
+          </div>
+
+          <div class="form-group full-width checkbox-group">
+            <label>
+              <input type="checkbox" id="confirmInfo" required />
+              I confirm that the information provided is true and accurate.
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Request</button>
+        <div id="formMessage" class="form-message"></div>
+      </form>
+    </div>
+  </section>
+
+  <script type="module" src="js/submit-case.js"></script>
+</body>
+</html>
