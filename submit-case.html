@@ -26,162 +26,137 @@
       </p>
 
       <form id="aidForm" class="aid-form">
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="patientName">Patient Full Name</label>
-            <input type="text" id="patientName" name="patientName" required />
-          </div>
+  <div class="form-grid">
 
-          <div class="form-group">
-            <label for="guardianName">Guardian / Contact Person</label>
-            <input type="text" id="guardianName" name="guardianName" required />
-          </div>
+    <div class="form-group">
+      <label for="patientName">Patient Name <span class="required">*</span></label>
+      <input type="text" id="patientName" name="patientName" required>
+    </div>
 
-          <div class="form-group">
-            <label for="age">Patient Age</label>
-            <input type="number" id="age" name="age" min="0" required />
-          </div>
+    <div class="form-group">
+      <label for="guardianName">Guardian Name <span class="required">*</span></label>
+      <input type="text" id="guardianName" name="guardianName" required>
+    </div>
 
-          <div class="form-group">
-            <label for="gender">Gender</label>
-            <select id="gender" name="gender" required>
-              <option value="">Select</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-            </select>
-          </div>
+    <div class="form-group">
+      <label for="age">Age <span class="required">*</span></label>
+      <div style="display: flex; gap: 10px;">
+        <input type="number" id="age" name="age" required min="0" style="flex: 1;">
+        <select id="ageUnit" name="ageUnit" required style="flex: 1;">
+          <option value="years">Years</option>
+          <option value="months">Months</option>
+        </select>
+      </div>
+    </div>
 
-          <div class="form-group">
-            <label for="phone">Contact Number</label>
-            <input type="tel" id="phone" name="phone" required />
-          </div>
+    <div class="form-group">
+      <label for="gender">Gender <span class="required">*</span></label>
+      <select id="gender" required>
+        <option value="">Select Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+    </div>
 
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" />
-          </div>
+    <div class="form-group">
+      <label for="phone">Phone <span class="required">*</span></label>
+      <input type="text" id="phone" name="phone" required>
+    </div>
 
-          <div class="form-group">
-            <label for="island">Island / City</label>
-            <input type="text" id="island" name="island" required />
-          </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email">
+    </div>
 
-          <div class="form-group">
-            <label for="hospital">Hospital / Treatment Place</label>
-            <input type="text" id="hospital" name="hospital" required />
-          </div>
+    <div class="form-group">
+      <label for="island">Island <span class="required">*</span></label>
+      <input type="text" id="island" name="island" required>
+    </div>
 
-          <div class="form-group full-width">
-            <label for="caseTitle">Case Title</label>
-            <input
-              type="text"
-              id="caseTitle"
-              name="caseTitle"
-              placeholder="Example: Help Ahmed for urgent heart surgery"
-              required
-            />
-          </div>
+    <div class="form-group">
+      <label for="hospital">Hospital <span class="required">*</span></label>
+      <input type="text" id="hospital" name="hospital" required>
+    </div>
 
-          <div class="form-group full-width">
-            <label for="diagnosis">Medical Condition / Diagnosis</label>
-            <input
-              type="text"
-              id="diagnosis"
-              name="diagnosis"
-              placeholder="Example: Liver transplant, kidney treatment, surgery, etc."
-              required
-            />
-          </div>
+    <div class="form-group">
+      <label for="caseTitle">Case Title <span class="required">*</span></label>
+      <input type="text" id="caseTitle" name="caseTitle" required>
+    </div>
 
-          <div class="form-group full-width">
-            <label for="story">Case Story</label>
-            <textarea
-              id="story"
-              name="story"
-              rows="6"
-              placeholder="Explain the medical situation, financial need, and why support is needed."
-              required
-            ></textarea>
-          </div>
+    <div class="form-group full-width">
+      <label for="diagnosis">Diagnosis <span class="required">*</span></label>
+      <input type="text" id="diagnosis" name="diagnosis" required>
+    </div>
 
-          <div class="form-group">
-            <label for="targetAmount">Target Amount (MVR)</label>
-            <input type="number" id="targetAmount" name="targetAmount" min="1" required />
-          </div>
+    <div class="form-group full-width">
+      <label for="story">Story <span class="required">*</span></label>
+      <textarea id="story" name="story" required></textarea>
+    </div>
 
-          <div class="form-group">
-            <label for="idNumber">ID Card / Passport Number</label>
-            <input type="text" id="idNumber" name="idNumber" required />
-          </div>
+    <div class="form-group">
+      <label for="targetAmount">Target Amount <span class="required">*</span></label>
+      <input type="number" id="targetAmount" name="targetAmount" required>
+    </div>
 
-          <div class="form-group full-width">
-            <label>Bank Account Details</label>
-            <small>Please provide MVR account, USD account, or both.</small>
-          </div>
-
-          <div class="bank-columns full-width">
-            <div class="bank-box">
-              <h3>MVR Account Details</h3>
-
-              <div class="form-group">
-                <label for="mvrBankName">MVR Bank Name</label>
-                <input type="text" id="mvrBankName" name="mvrBankName" />
-              </div>
-
-              <div class="form-group">
-                <label for="mvrAccountName">MVR Account Name</label>
-                <input type="text" id="mvrAccountName" name="mvrAccountName" />
-              </div>
-
-              <div class="form-group">
-                <label for="mvrAccountNumber">MVR Account Number</label>
-                <input type="text" id="mvrAccountNumber" name="mvrAccountNumber" />
-              </div>
-            </div>
-
-            <div class="bank-box">
-              <h3>USD Account Details</h3>
-
-              <div class="form-group">
-                <label for="usdBankName">USD Bank Name</label>
-                <input type="text" id="usdBankName" name="usdBankName" />
-              </div>
-
-              <div class="form-group">
-                <label for="usdAccountName">USD Account Name</label>
-                <input type="text" id="usdAccountName" name="usdAccountName" />
-              </div>
-
-              <div class="form-group">
-                <label for="usdAccountNumber">USD Account Number</label>
-                <input type="text" id="usdAccountNumber" name="usdAccountNumber" />
-              </div>
-            </div>
-          </div>
-
-          <div class="form-group full-width">
-            <label for="documents">Upload Supporting Documents</label>
-            <input
-              type="file"
-              id="documents"
-              name="documents"
-              multiple
-              accept=".jpg,.jpeg,.png,.pdf"
-            />
-            <small>Accepted: JPG, PNG, PDF</small>
-          </div>
-
-          <div class="form-group full-width checkbox-group">
-            <label>
-              <input type="checkbox" id="confirmInfo" required />
-              I confirm that the information provided is true and accurate.
-            </label>
-          </div>
+    <!-- Bank Accounts -->
+    <div class="bank-columns full-width">
+      <div class="bank-box">
+        <h3>MVR Account</h3>
+        <div class="form-group">
+          <label for="mvrBankName">Bank <span class="required">*</span></label>
+          <select id="mvrBankName">
+            <option value="">Select Bank</option>
+            <option value="BML">BML</option>
+            <option value="MIB">MIB</option>
+          </select>
         </div>
+        <div class="form-group">
+          <label for="mvrAccountName">Account Name <span class="required">*</span></label>
+          <input type="text" id="mvrAccountName" name="mvrAccountName">
+        </div>
+        <div class="form-group">
+          <label for="mvrAccountNumber">Account Number <span class="required">*</span></label>
+          <input type="text" id="mvrAccountNumber" name="mvrAccountNumber">
+        </div>
+      </div>
 
-        <button type="submit" class="submit-btn">Submit Request</button>
-        <div id="formMessage" class="form-message"></div>
-      </form>
+      <div class="bank-box">
+        <h3>USD Account</h3>
+        <div class="form-group">
+          <label for="usdBankName">Bank <span class="required">*</span></label>
+          <select id="usdBankName">
+            <option value="">Select Bank</option>
+            <option value="BML">BML</option>
+            <option value="MIB">MIB</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="usdAccountName">Account Name <span class="required">*</span></label>
+          <input type="text" id="usdAccountName" name="usdAccountName">
+        </div>
+        <div class="form-group">
+          <label for="usdAccountNumber">Account Number <span class="required">*</span></label>
+          <input type="text" id="usdAccountNumber" name="usdAccountNumber">
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group full-width">
+      <label for="documents">Upload Documents</label>
+      <input type="file" id="documents" multiple>
+    </div>
+
+    <div class="checkbox-group full-width">
+      <label>
+        <input type="checkbox" id="confirmInfo"> I confirm that the information is accurate <span class="required">*</span>
+      </label>
+    </div>
+
+  </div>
+
+  <button type="submit" class="submit-btn">Submit Request</button>
+  <div id="formMessage"></div>
+</form>
     </div>
   </section>
 

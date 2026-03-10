@@ -18,20 +18,19 @@ aidForm.addEventListener("submit", async function (e) {
     age: document.getElementById("age").value.trim(),
     gender: document.getElementById("gender").value,
     phone: document.getElementById("phone").value.trim(),
-    email: document.getElementById("email").value.trim(),
+    email: document.getElementById("email").value.trim() || null, // optional
     island: document.getElementById("island").value.trim(),
     hospital: document.getElementById("hospital").value.trim(),
     caseTitle: document.getElementById("caseTitle").value.trim(),
     diagnosis: document.getElementById("diagnosis").value.trim(),
     story: document.getElementById("story").value.trim(),
     targetAmount: document.getElementById("targetAmount").value.trim(),
-    idNumber: document.getElementById("idNumber").value.trim(),
 
-    mvrBankName: document.getElementById("mvrBankName").value.trim(),
+    mvrBankName: document.getElementById("mvrBankName").value,
     mvrAccountName: document.getElementById("mvrAccountName").value.trim(),
     mvrAccountNumber: document.getElementById("mvrAccountNumber").value.trim(),
 
-    usdBankName: document.getElementById("usdBankName").value.trim(),
+    usdBankName: document.getElementById("usdBankName").value,
     usdAccountName: document.getElementById("usdAccountName").value.trim(),
     usdAccountNumber: document.getElementById("usdAccountNumber").value.trim(),
 
@@ -43,15 +42,8 @@ aidForm.addEventListener("submit", async function (e) {
   const documentsInput = document.getElementById("documents");
   const files = documentsInput.files;
 
-  const hasMvrAccount =
-    formData.mvrBankName ||
-    formData.mvrAccountName ||
-    formData.mvrAccountNumber;
-
-  const hasUsdAccount =
-    formData.usdBankName ||
-    formData.usdAccountName ||
-    formData.usdAccountNumber;
+  const hasMvrAccount = formData.mvrBankName && formData.mvrAccountName && formData.mvrAccountNumber;
+  const hasUsdAccount = formData.usdBankName && formData.usdAccountName && formData.usdAccountNumber;
 
   if (!formData.confirmInfo) {
     showMessage("Please confirm that the information is accurate.", "error");
@@ -59,6 +51,7 @@ aidForm.addEventListener("submit", async function (e) {
     return;
   }
 
+  // Required fields check
   if (
     !formData.patientName ||
     !formData.guardianName ||
@@ -70,8 +63,7 @@ aidForm.addEventListener("submit", async function (e) {
     !formData.caseTitle ||
     !formData.diagnosis ||
     !formData.story ||
-    !formData.targetAmount ||
-    !formData.idNumber
+    !formData.targetAmount
   ) {
     showMessage("Please fill in all required fields.", "error");
     resetSubmitButton(submitBtn);
@@ -79,25 +71,9 @@ aidForm.addEventListener("submit", async function (e) {
   }
 
   if (!hasMvrAccount && !hasUsdAccount) {
-    showMessage("Please provide at least one bank account: MVR or USD.", "error");
+    showMessage("Please provide at least one complete bank account: MVR or USD.", "error");
     resetSubmitButton(submitBtn);
     return;
-  }
-
-  if (hasMvrAccount) {
-    if (!formData.mvrBankName || !formData.mvrAccountName || !formData.mvrAccountNumber) {
-      showMessage("Please complete all MVR account fields.", "error");
-      resetSubmitButton(submitBtn);
-      return;
-    }
-  }
-
-  if (hasUsdAccount) {
-    if (!formData.usdBankName || !formData.usdAccountName || !formData.usdAccountNumber) {
-      showMessage("Please complete all USD account fields.", "error");
-      resetSubmitButton(submitBtn);
-      return;
-    }
   }
 
   try {
